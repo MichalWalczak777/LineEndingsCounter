@@ -67,22 +67,39 @@ namespace LineEndingsCounter
             int CRCtr = 0;
             int LFCtr = 0;
 
+            EndingsType lastEnding = EndingsType.UNKNOWN;
+            bool canBeCRLF = true;
+
             foreach (char c in text)
             {
                 switch (c)
                 {
                     case '\n':
                         LFCtr++;
+
+                        if(lastEnding == EndingsType.LF)
+                        {
+                            canBeCRLF = false;
+                        }
+
+                        lastEnding = EndingsType.LF;
                         break;
 
                     case '\r':
                         CRCtr++;
+
+                        if (lastEnding == EndingsType.CR)
+                        {
+                            canBeCRLF = false;
+                        }
+
+                        lastEnding = EndingsType.CR;
                         break;
                 }
             }
 
 
-            if (CRCtr == LFCtr && CRCtr != 0)
+            if (CRCtr == LFCtr && CRCtr != 0 && canBeCRLF)
             { 
                 return EndingsType.CRLF;
             }

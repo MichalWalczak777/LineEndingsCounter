@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace LineEndingsCounter
 {
    public enum EndingsType
-    { CRLF, LF, MIXED, UNKNOWN  }
+    { CRLF, CR, LF, MIXED, UNKNOWN  }
 }
  

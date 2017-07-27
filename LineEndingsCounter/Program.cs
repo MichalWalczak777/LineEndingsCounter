@@ -12,7 +12,10 @@ namespace LineEndingsCounter
         {
 
             FileCounter ds = new FileCounter();
+
             string path = System.Environment.CurrentDirectory;
+            path = Directory.GetParent(Directory.GetParent(path).ToString()).ToString();
+            path = path + "\\Endings";
 
             ds.CountAndDisplay(path);
         }

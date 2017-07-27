@@ -74,6 +74,7 @@ namespace LineEndingsCounter
                     case '\n':
                         LFCtr++;
                         break;
+
                     case '\r':
                         CRCtr++;
                         break;

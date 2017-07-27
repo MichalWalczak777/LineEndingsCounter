@@ -103,7 +103,7 @@ namespace LineEndingsCounter
             { 
                 return EndingsType.CRLF;
             }
-            else if (CRCtr == 0)
+            else if (CRCtr == 0 && LFCtr != 0)
             {
                 return EndingsType.LF;
             }

@@ -42,6 +42,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Endings\crlf1.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Endings\crlf2.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Endings\Endings2\lf4.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Endings\Endings3\crlf3.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Endings\Endings3\lf3.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Endings\lf1.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Endings\lf2.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Compile Include="FileCounter.cs" />
     <Compile Include="EndingsType.cs" />
     <Compile Include="Program.cs" />

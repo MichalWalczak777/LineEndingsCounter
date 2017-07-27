@@ -10,8 +10,11 @@ namespace LineEndingsCounter
 
         static void Main(string[] args)
         {
+
             FileCounter ds = new FileCounter();
-            ds.CountAndDisplay(@"C:\Users\Michał\Documents\Endings");
+            string path = System.Environment.CurrentDirectory;
+
+            ds.CountAndDisplay(path);
         }
 
     }

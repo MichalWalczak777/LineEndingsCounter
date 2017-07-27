@@ -52,20 +52,6 @@ namespace LineEndingsCounter
                         break;
 
                 }
-                    //if (CheckLineEndings(text) == EndingsType.LF)
-                    //{
-                    //    LFEndingsFilesCounter++;
-                    //    LFEndingsFilesList.Add(filePath);
-                    //}
-                    //else if (CheckLineEndings(text) == EndingsType.MIXED)
-                    //{
-                    //    MixedEndingsFilesCounter++;
-                    //    MixedEndingsFilesList.Add(filePath);
-                    //}
-                    //else if (CheckLineEndings(text) == EndingsType.CRLF)
-                    //{
-                    //    CRLFEndingsFilesCounter++;
-                    //}
 
                 }
                 foreach (string filePath in Directory.GetDirectories(sDir))
@@ -95,17 +81,6 @@ namespace LineEndingsCounter
             }
 
 
-                //if (c == '\n')
-                //{
-                //    LFCtr++;
-                //}
-                //else if (c == '\r')
-                //{
-
-                //    CRCtr++;
-                //}
-
-
             if (CRCtr == LFCtr && CRCtr != 0)
             { 
                 return EndingsType.CRLF;
@@ -124,6 +99,8 @@ namespace LineEndingsCounter
                 return EndingsType.UNKNOWN;
             }
         }
+
+
 
         private void DisplayResults()
         {
@@ -147,7 +124,7 @@ namespace LineEndingsCounter
                 Console.WriteLine(filePath);
             }
 
-            Thread.Sleep(10000);
+            Thread.Sleep(40000);
         }
 
 
